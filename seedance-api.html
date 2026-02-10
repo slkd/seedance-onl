@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seedance API Documentation 2026 | Seedance 2.0 API Guide & Pricing</title>
+    <meta name="description"
+        content="Complete Seedance API documentation. Integrate Seedance 2.0 AI video generation into your apps. API pricing, endpoints, and code examples.">
+    <meta name="keywords" content="seedance 2.0 api, seedance api, seedance ai api, seedance api pricing">
+    <link rel="canonical" href="https://seedance.onl/seedance-api.html">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <span class="logo-text">Seedance 2.0</span>
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="seedance-api.html">API</a></li>
+                        <li><a href="seedance-pricing.html">Pricing</a></li>
+                        <li><a href="seedance-documentation.html">Docs</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Seedance 2.0 API Documentation</h1>
+            <p>Integrate <strong>ByteDance's AI video generation</strong> into your applications with the Seedance API.
+                Enterprise-grade reliability and scalability.</p>
+        </section>
+
+        <article class="content-wrapper">
+            <section id="overview">
+                <h2>🔌 Seedance API Overview</h2>
+
+                <p>The <strong>Seedance 2.0 API</strong> provides programmatic access to ByteDance's multi-modal AI
+                    video generation model. Build video creation tools, automate workflows, or integrate AI video into
+                    your products.</p>
+
+                <h3>Key API Features</h3>
+                <ul>
+                    <li>✅ <strong>RESTful architecture</strong> - Easy integration with any platform</li>
+                    <li>✅ <strong>Multi-modal support</strong> - Upload images, videos, audio programmatically</li>
+                    <li>✅ <strong>Webhook callbacks</strong> - Get notified when videos complete</li>
+                    <li>✅ <strong>Batch processing</strong> - Generate multiple videos in parallel</li>
+                    <li>✅ <strong>99.9% uptime SLA</strong> - Enterprise reliability</li>
+                </ul>
+            </section>
+
+            <section id="pricing">
+                <h2>💰 API Pricing</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tier</th>
+                            <th>Monthly Cost</th>
+                            <th>API Credits</th>
+                            <th>Rate Limit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Developer</td>
+                            <td>$99/month</td>
+                            <td>2,000 credits</td>
+                            <td>10 req/min</td>
+                        </tr>
+                        <tr>
+                            <td>Business</td>
+                            <td>$299/month</td>
+                            <td>8,000 credits</td>
+                            <td>50 req/min</td>
+                        </tr>
+                        <tr>
+                            <td>Enterprise</td>
+                            <td>Custom</td>
+                            <td>Custom</td>
+                            <td>Unlimited</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>All API plans include dedicated support and 99.9% uptime SLA. See full pricing: <a
+                        href="seedance-pricing.html">Seedance Pricing</a></p>
+            </section>
+
+            <section id="quickstart">
+                <h2>🚀 Quick Start Guide</h2>
+
+                <h3>1. Get Your API Key</h3>
+                <p>Sign up for API access through <a href="seedance-dreamina.html">Dreamina Platform</a> and generate
+                    your API key from the developer dashboard.</p>
+
+                <h3>2. Basic Video Generation</h3>
+                <pre><code>curl -X POST https://api.seedance.ai/v2/generate \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "prompt": "A cinematic shot of a sunset over mountains",
+    "duration": 10,
+    "resolution": "2k",
+    "style": "photorealistic"
+  }'</code></pre>
+
+                <h3>3. Multi-Modal Input Example</h3>
+                <pre><code>curl -X POST https://api.seedance.ai/v2/generate \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "prompt": "Create video using @character and @background",
+    "assets": [
+      {"id": "character", "url": "https://example.com/image.jpg"},
+      {"id": "background", "url": "https://example.com/scene.mp4"}
+    ],
+    "audio_url": "https://example.com/music.mp3",
+    "duration": 15
+  }'</code></pre>
+            </section>
+
+            <section id="endpoints">
+                <h2>📡 API Endpoints</h2>
+
+                <h3>POST /v2/generate</h3>
+                <p>Generate a new video from prompt and assets.</p>
+
+                <h3>GET /v2/status/{job_id}</h3>
+                <p>Check generation status and retrieve download URL when complete.</p>
+
+                <h3>POST /v2/extend</h3>
+                <p>Extend an existing video with additional frames.</p>
+
+                <h3>DELETE /v2/jobs/{job_id}</h3>
+                <p>Cancel a pending video generation job.</p>
+
+                <p>Full API reference: <a href="seedance-documentation.html">Seedance Documentation</a></p>
+            </section>
+
+            <section id="sdks">
+                <h2>💻 Official SDKs</h2>
+
+                <h3>Python SDK</h3>
+                <pre><code>pip install seedance-sdk
+
+from seedance import SeedanceClient
+
+client = SeedanceClient(api_key="YOUR_API_KEY")
+video = client.generate(
+    prompt="A dragon flying over castle",
+    duration=10
+)
+print(video.download_url)</code></pre>
+
+                <h3>Node.js SDK</h3>
+                <pre><code>npm install seedance-node
+
+const Seedance = require('seedance-node');
+const client = new Seedance('YOUR_API_KEY');
+
+const video = await client.generate({
+  prompt: 'Astronaut walking on Mars',
+  duration: 15
+});</code></pre>
+
+                <p>More SDKs available via <a href="seedance-github.html">Seedance GitHub</a>.</p>
+            </section>
+
+            <section id="use-cases">
+                <h2>🎯 API Use Cases</h2>
+
+                <h3>For SaaS Products</h3>
+                <ul>
+                    <li>Integrate AI video generation into marketing platforms</li>
+                    <li>Add video creation to social media management tools</li>
+                    <li>Build automated video editors</li>
+                </ul>
+
+                <h3>For Agencies</h3>
+                <ul>
+                    <li>Batch generate client videos at scale</li>
+                    <li>Automate social media content production</li>
+                    <li>Create dynamic video ads programmatically</li>
+                </ul>
+
+                <h3>For Developers</h3>
+                <ul>
+                    <li>Build AI video apps and tools</li>
+                    <li>Integrate into existing workflows</li>
+                    <li>Experiment with cutting-edge video AI</li>
+                </ul>
+            </section>
+
+            <section class="mt-lg">
+                <h2>📚 Related Resources</h2>
+                <ul>
+                    <li><a href="seedance-documentation.html">Complete API Documentation</a></li>
+                    <li><a href="seedance-github.html">GitHub Examples & SDKs</a></li>
+                    <li><a href="seedance-pricing.html">API Pricing Details</a></li>
+                    <li><a href="index.html">What is Seedance 2.0?</a></li>
+                </ul>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>Seedance.onl is an unofficial guide to Seedance 2.0 API by ByteDance.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

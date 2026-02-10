@@ -1,0 +1,23 @@
+{
+  "name": "ClawdBot - AI Assistant Guide",
+  "short_name": "ClawdBot",
+  "description": "Complete guide to ClawdBot AI assistant - installation, setup, and usage",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#667eea",
+  "icons": [
+    {
+      "src": "images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

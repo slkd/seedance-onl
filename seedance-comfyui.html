@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seedance ComfyUI Workflow: Advanced AI Video Integration Guide</title>
+    <meta name="description"
+        content="Integrate Seedance 2.0 with ComfyUI for advanced AI video workflows. Custom nodes, examples, and automation.">
+    <meta name="keywords" content="seedance comfyui, seedance comfyui workflow, comfy seedance, comfyui seedance nodes">
+    <link rel="canonical" href="https://seedance.onl/seedance-comfyui.html">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo"><span
+                        class="logo-text">Seedance 2.0</span></a>
+                <nav>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="seedance-api.html">API</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <section class="hero">
+            <h1>Seedance ComfyUI Integration</h1>
+            <p>Advanced <strong>ComfyUI workflows</strong> for Seedance 2.0. Automate AI video generation with custom
+                nodes and pipelines.</p>
+        </section>
+        <article class="content-wrapper">
+            <section id="what-is-comfyui">
+                <h2>🤔 What is ComfyUI?</h2>
+                <p><strong>ComfyUI</strong> is a powerful node-based interface for AI generation workflows. It allows
+                    visual programming of complex AI pipelines without writing code.</p>
+            </section>
+            <section id="installation">
+                <h2>📦 Installing Seedance ComfyUI Nodes</h2>
+                <pre><code># Clone custom nodes repository
+cd ComfyUI/custom_nodes/
+git clone https://github.com/community/ComfyUI-Seedance
+
+# Install dependencies
+cd ComfyUI-Seedance
+pip install -r requirements.txt
+
+# Add your Seedance API key
+cp config.example.json config.json
+# Edit config.json with your API key</code></pre>
+                <p>API key available from <a href="seedance-api.html">Seedance API portal</a>.</p>
+            </section>
+            <section id="workflow-examples">
+                <h2>🔧 Example Workflows</h2>
+                <h3>Basic Text-to-Video Workflow</h3>
+                <p>Nodes: Text Prompt → Seedance Generator → Video Preview → Save Video</p>
+                <h3>Image-to-Video Pipeline</h3>
+                <p>Nodes: Load Image → Image Preprocessor → @ Mention Builder → Seedance Generator → Output</p>
+                <h3>Batch Video Generation</h3>
+                <p>Nodes: CSV Loader → Text Template → Loop → Seedance Generator → Batch Save</p>
+            </section>
+            <section id="custom-nodes">
+                <h2>🎨 Available Custom Nodes</h2>
+                <ul>
+                    <li><strong>Seedance Generator:</strong> Main generation node</li>
+                    <li><strong>@ Mention Builder:</strong> Visual interface for multi-modal inputs</li>
+                    <li><strong>Seedance Upscaler:</strong> Enhance resolution beyond 2K</li>
+                    <li><strong>Audio Sync Node:</strong> Synchronize audio tracks</li>
+                    <li><strong>Batch Processor:</strong> Generate multiple videos from templates</li>
+                </ul>
+            </section>
+            <section class="mt-lg">
+                <h2>📚 More Resources</h2>
+                <ul>
+                    <li><a href="seedance-api.html">Seedance API Documentation</a></li>
+                    <li><a href="seedance-github.html">GitHub Examples</a></li>
+                    <li><a href="seedance-video-generator.html">Seedance Tutorial</a></li>
+                </ul>
+            </section>
+        </article>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>Seedance.onl - Unofficial ComfyUI integration guide.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

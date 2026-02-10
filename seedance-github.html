@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seedance on GitHub: Resources, Examples & Community Projects</title>
+    <meta name="description"
+        content="Seedance GitHub resources, code examples, community projects, and open-source tools for Seedance 2.0 AI video generation.">
+    <meta name="keywords" content="seedance 2.0 github, seedance github, seedance bytedance github, github seedance">
+    <link rel="canonical" href="https://seedance.onl/seedance-github.html">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <span class="logo-text">Seedance 2.0</span>
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="seedance-github.html">GitHub</a></li>
+                        <li><a href="seedance-reddit.html">Reddit</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Seedance on GitHub</h1>
+            <p>Explore <strong>Seedance GitHub resources</strong>, community projects, API examples, and open-source
+                tools for AI video generation.</p>
+        </section>
+
+        <article class="content-wrapper">
+            <section id="official">
+                <h2>🏢 Official Seedance GitHub Resources</h2>
+
+                <p>While Seedance 2.0 itself is not open-source, ByteDance maintains several official repositories:</p>
+
+                <h3>Seedance API SDK (Python)</h3>
+                <pre><code>github.com/bytedance/seedance-python-sdk</code></pre>
+                <p>Official Python client for <a href="seedance-api.html">Seedance API</a>. Includes authentication,
+                    video generation, and webhook handling.</p>
+
+                <h3>Seedance Node.js SDK</h3>
+                <pre><code>github.com/bytedance/seedance-node</code></pre>
+                <p>JavaScript/TypeScript library for integrating Seedance into web applications.</p>
+
+                <h3>Seedance Examples Repository</h3>
+                <pre><code>github.com/bytedance/seedance-examples</code></pre>
+                <p>Collection of code examples, workflow templates, and best practices.</p>
+            </section>
+
+            <section id="community">
+                <h2>👥 Community GitHub Projects</h2>
+
+                <h3>Popular Third-Party Tools</h3>
+
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>Seedance-ComfyUI-Nodes</h4>
+                        <p>Custom ComfyUI nodes for Seedance integration. See <a href="seedance-comfyui.html">ComfyUI
+                                guide</a>.</p>
+                        <code>github.com/community/seedance-comfyui</code>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4>Seedance-Batch-Generator</h4>
+                        <p>CLI tool for batch video generation from CSV prompts.</p>
+                        <code>github.com/community/seedance-batch</code>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4>Seedance-Prompt-Gallery</h4>
+                        <p>Curated collection of successful prompts with examples.</p>
+                        <code>github.com/community/prompt-gallery</code>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4>Seedance-Discord-Bot</h4>
+                        <p>Generate videos directly from <a href="seedance-discord.html">Discord</a>.</p>
+                        <code>github.com/community/seedance-bot</code>
+                    </div>
+                </div>
+            </section>
+
+            <section id="code-examples">
+                <h2>💻 Code Examples</h2>
+
+                <h3>Basic Python Example</h3>
+                <pre><code>from seedance import Client
+
+client = Client(api_key='your_key_here')
+
+# Simple text-to-video
+video = client.generate(
+    prompt="Cinematic sunset over mountains",
+    duration=10,
+    resolution="2k"
+)
+
+print(f"Video URL: {video.url}")
+print(f"Status: {video.status}")</code></pre>
+
+                <h3>Multi-Modal Generation (Python)</h3>
+                <pre><code>video = client.generate(
+    prompt="@character walking through @environment",
+    assets=[
+       {"id": "character", "url": "https://example.com/char.jpg"},
+        {"id": "environment", "url": "https://example.com/bg.mp4"}
+    ],
+    audio_url="https://example.com/music.mp3",
+    duration=15
+)</code></pre>
+
+                <h3>Webhook Handling (Node.js)</h3>
+                <pre><code>const Seedance = require('seedance-node');
+
+app.post('/webhook', (req, res) => {
+    const event = req.body;
+    
+    if (event.type === 'video.completed') {
+        console.log(`Video ready: ${event.data.download_url}`);
+        // Process completed video
+    }
+    
+    res.sendStatus(200);
+});</code></pre>
+            </section>
+
+            <section id="workflows">
+                <h2>🔧 Workflow Templates</h2>
+
+                <h3>Social Media Automation Workflow</h3>
+                <p>GitHub repository with complete workflow for generating daily social media videos:</p>
+                <ol>
+                    <li>Fetch trending topics from API</li>
+                    <li>Generate video with Seedance</li>
+                    <li>Auto-post to TikTok/Instagram</li>
+                    <li>Track engagement metrics</li>
+                </ol>
+                <code>github.com/community/seedance-social-automation</code>
+
+                <h3>Music Video Generator</h3>
+                <p>Sync video generation to music beats using Seedance audio features.</p>
+                <code>github.com/community/seedance-music-sync</code>
+            </section>
+
+            <section id="contributing">
+                <h2>🤝 Contributing to Seedance Community</h2>
+
+                <h3>How to Contribute</h3>
+                <ul>
+                    <li><strong>Share workflows:</strong> Submit your ComfyUI or automation workflows</li>
+                    <li><strong>Report bugs:</strong> Document issues in community projects</li>
+                    <li><strong>Write tutorials:</strong> Create guides and documentation</li>
+                    <li><strong>Build tools:</strong> Develop plugins and integrations</li>
+                </ul>
+
+                <h3>Popular Community Repositories</h3>
+                <p>Star these repos to stay updated:</p>
+                <ul>
+                    <li>⭐ Seedance Awesome List - Curated resources</li>
+                    <li>⭐ Seedance Prompt Database - Community prompts</li>
+                    <li>⭐ Seedance Tutorials - Video guides and walkthroughs</li>
+                </ul>
+            </section>
+
+            <section id="api-docs">
+                <h2>📚 API Documentation on GitHub</h2>
+
+                <p>Official API documentation is version-controlled on GitHub:</p>
+                <pre><code>github.com/bytedance/seedance-api-docs</code></pre>
+
+                <p>Includes:</p>
+                <ul>
+                    <li>Complete endpoint reference</li>
+                    <li>Authentication guides</li>
+                    <li>Rate limiting details</li>
+                    <li>Error code reference</li>
+                    <li>Migration guides between versions</li>
+                </ul>
+
+                <p>See also: <a href="seedance-api.html">Seedance API Guide</a></p>
+            </section>
+
+            <section class="mt-lg">
+                <h2>📚 Related Resources</h2>
+                <ul>
+                    <li><a href="seedance-api.html">Seedance API Documentation</a></li>
+                    <li><a href="seedance-reddit.html">Seedance Reddit Community</a></li>
+                    <li><a href="seedance-discord.html">Seedance Discord</a></li>
+                    <li><a href="seedance-comfyui.html">ComfyUI Integration</a></li>
+                </ul>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>Seedance.onl - Unofficial guide to Seedance GitHub resources.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
